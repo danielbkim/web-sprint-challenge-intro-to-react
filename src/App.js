@@ -10,7 +10,7 @@ const App = () => {
   
 
   // set up state
-  const [ character, setCharacter ] = useState([]);
+  const [ characters, setCharacters ] = useState([]);
 
   // Fetch characters from the API in an effect hook. Remember, anytime you have a 
   // side effect in a component, you want to think about which state and/or props it should
@@ -19,7 +19,7 @@ const App = () => {
     axios.get('https://swapi.dev/api/people')
       .then((res) => {
         // console.log(res.data);
-        setCharacter(res.data);
+        setCharacters(res.data);
       })
       .catch((err) => {
         console.log(err);
@@ -30,7 +30,11 @@ const App = () => {
     <div className="App">
       <h1 className="Header">Characters</h1>
       <div>
-        <Character />
+        {/* <Character character=/> */}
+        { characters.map((char, index) => {
+          // console.log(index)
+          return <Character key={ index } character={ char }/>
+        }) }
       </div>
     </div>
   );
