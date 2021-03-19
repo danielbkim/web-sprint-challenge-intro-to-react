@@ -12,7 +12,7 @@ const App = () => {
 
   // set up state
   const [ characters, setCharacters ] = useState([]);
-  const [ characterId, setCharacterId ] = useState(0);
+  // const [ characterId, setCharacterId ] = useState(0);
 
   // Fetch characters from the API in an effect hook. Remember, anytime you have a 
   // side effect in a component, you want to think about which state and/or props it should
@@ -29,7 +29,12 @@ const App = () => {
   }, []);  // without the empty array, the call keeps happening
 
   // use styles from styled components here:
-  const StyledSection = styled.div``
+  const StyledSection = styled.div`
+    width: 60%;
+    display: flex; 
+    justify-content: space-between;
+    color: red;
+  `
 
   const StyledTitle = styled.h1``
 

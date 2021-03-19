@@ -12,7 +12,9 @@ export default function Character({ character, people }) {
     peopleObj[people] = character.name;
     // console.log(peopleObj);
 
-    const Styledh3 = styled.h3``;
+    const Styledh3 = styled.h3`
+        color: red;
+    `;
 
     const StyledParagraph = styled.p``;
 
