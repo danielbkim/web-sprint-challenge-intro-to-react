@@ -1,5 +1,6 @@
 // Write your Character component here
 import React from 'react';
+import styled from 'styled-components';
 
 export default function Character({ character, people }) {
     const peopleObj = {};
@@ -10,6 +11,16 @@ export default function Character({ character, people }) {
     // console.log(character.key, character.url)
     peopleObj[people] = character.name;
     // console.log(peopleObj);
+
+    const Styledh3 = styled.h3``;
+
+    const StyledParagraph = styled.p``;
+
+    const StyledList = styled.ul``;
+
+    const StyledListItem = styled.li``;
+
+
     return (
         // { for(let i in characterUrls) {
         //     characterUrls[character.url];
